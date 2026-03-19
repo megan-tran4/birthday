@@ -1,0 +1,88 @@
+.card {
+    width: 300px;
+    height: 40vh;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+
+}
+.cake {
+    top: 30%;
+    padding: 20px;
+    position: relative;
+}
+
+.wax {
+    width: 15px;
+    height: 45px;
+    background: repeating-linear-gradient(
+        45deg, 
+        #fd3018 0,
+        #fd3015 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+
+    );
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+/* make teardrop shape for flame */
+.flame {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top:  2%;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg) translateX(-50%) translateY(20%);
+    background: radial-gradient(
+        circle at 50% 100%, #ffcc00 0, #ff6600 70%, transparent 100%
+    );
+    position: absolute;
+    animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/**/
+.cake  {
+    position: absolute
+}
+/* make cake a same pattern of yellow with repeating brown circles on the top*/
+.layer-1, .layer-2, .layer-3 {
+    width: 240px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #e3a953 50px, 
+        #e3a953 60px, 
+        transparent 60px
+
+    ), radial-gradient( 
+        circle at 30px 5px, #713e16 40px, #eac284 31px
+    );
+}
+
+.layer-2 {
+    transform: scale(0.85);
+    top: 1vh;
+}
+
+.layer-1{
+    transform: scale(0.7);
+    top: 4vh;
+}
+.card-message {
+    padding: 20px;
+    font-size: 1.5em;
+}

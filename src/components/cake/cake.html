@@ -1,0 +1,21 @@
+<div>
+    <h1> Happy birthday!</h1>
+    <h3 [hidden]="!isCandleLit">blow out the candle</h3>
+    <h3 [hidden]="isCandleLit">open the card</h3>
+    <div></div>
+    <div class="card" (click)="openCard()"> 
+        <div class="cake" [hidden]="!isCandleLit && cardOpen">
+            <div class ="candle" style="display: flex; flex: row;">
+                <div class="flame" [hidden]="!isCandleLit" (click)="blowOut()"></div>
+                <div class="wax"></div>
+            </div>
+            <div class="layer-1"></div>
+            <div class="layer-2"></div>
+            <div class="layer-3"></div>
+        </div>
+
+        <div class="card-message" [hidden]="!cardOpen">
+            <p>Wishing you a day filled with happiness and a year filled with joy. Happy birthday!</p>
+        </div>
+    </div>
+</div>
