@@ -1,7 +1,7 @@
 <div>
     <h1> Happy birthday!</h1>
     <h3 [hidden]="!isCandleLit">blow out the candle</h3>
-    <h3 [hidden]="isCandleLit">open the card</h3>
+    <h3 [hidden]="isCandleLit || cardOpen">open the card</h3>
     <div></div>
     <div class="card" (click)="openCard()"> 
         <div class="cake" [hidden]="!isCandleLit && cardOpen">
